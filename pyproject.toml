@@ -1,0 +1,18 @@
+[project]
+name = "eng-id-nmt-basic"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "pnabilah",email = "puti.nabilah@ui.ac.id"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "eng_id_nmt_basic", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
