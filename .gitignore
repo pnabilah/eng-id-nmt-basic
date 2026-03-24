@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[codz]
+*$py.class
+
+# Data
+# /data/
+
+# IDE / Editor
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# poetry
+# poetry.lock
+# poetry.toml
+
+# Misc
+exploration.ipynb
+note.txt
