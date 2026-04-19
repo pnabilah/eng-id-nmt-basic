@@ -6,8 +6,13 @@ authors = [
     {name = "pnabilah",email = "puti.nabilah@ui.ac.id"}
 ]
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.10, <3.15"
 dependencies = [
+    "tensorflow (>=2.20.0,<3.0.0)",
+    "jupyter (>=1.1.1,<2.0.0)",
+    "ipykernel (>=7.2.0,<8.0.0)",
+    "matplotlib (>=3.10.8,<4.0.0)",
+    "pandas (==2.3.3)"
 ]
 
 [tool.poetry]
