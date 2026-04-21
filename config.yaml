@@ -1,0 +1,18 @@
+dataset:
+  raw_path: "data/English-Indonesian.tsv"
+
+model:
+  embed_dim: 128
+  lstm_units: 512
+  max_tokens: 1000
+  max_translation_len: 100
+
+training:
+  epochs: 10
+
+paths:
+  best_model_path: "models/seq2seqlstm1/best_val_model.keras"
+  final_model_path: "models/seq2seqlstm1/final_epoch_model.keras"
+  history_path: "models/seq2seqlstm1/training_history.json"
+  loss_curve_path: "results/seq2seqlstm1_loss_curve.png"
+  accuracy_curve_path: "results/seq2seqlstm1_accuracy_curve.png"
