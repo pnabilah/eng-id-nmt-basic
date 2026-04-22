@@ -18,8 +18,8 @@ def preprocess(filepath):
     # Split dataset
     X_train = tf.constant(sentences_en[:20_000])
     X_val = tf.constant(sentences_en[20_000:])
-    X_train_dec = tf.constant([f"startofseq {s}" for s in sentences_id[20_000:]])
-    X_val_dec = tf.constant([f"startofseq {s}" for s in sentences_id[:20_000]])
-    Y_train = tf.constant([f"{s} endofseq" for s in sentences_id[20_000:]])
-    Y_val = tf.constant([f"{s} endofseq" for s in sentences_id[:20_000]])
+    X_train_dec = tf.constant([f"startofseq {s}" for s in sentences_id[:20_000]])
+    X_val_dec = tf.constant([f"startofseq {s}" for s in sentences_id[20_000:]])
+    Y_train = text_vec_layer_id([f"{s} endofseq" for s in sentences_id[:20_000]])
+    Y_val = text_vec_layer_id([f"{s} endofseq" for s in sentences_id[20_000:]])
     return X_train, X_val, X_train_dec, X_val_dec, Y_train, Y_val, text_vec_layer_en, text_vec_layer_id
