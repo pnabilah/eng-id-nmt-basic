@@ -48,4 +48,4 @@ def translate_beam_search(model, sentence, max_length=100, beam_width=10):
         if all("endofseq" in seq for seq, _ in best_candidates):
             break
 
-    return max(best_candidates, key=lambda x: x[1])[0].strip()
+    return best_candidates[-1][0].replace("startofseq", "").replace("endofseq", "").strip()
