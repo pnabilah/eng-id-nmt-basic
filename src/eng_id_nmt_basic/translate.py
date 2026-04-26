@@ -36,14 +36,14 @@ def translate_beam_search(model, sentence, max_length=100, beam_width=10):
                     seq_candidate = seq + " " + vocab[idx]
                     score_candidate = np.log(y_proba[idx] + 1e-9) + score
                     candidates.append((seq_candidate, score_candidate))
-                    
+            
         scores_candidates = [t[1] for t in candidates]
         sorted_scores = sorted(range(len(scores_candidates)), key=lambda i:scores_candidates[i])
         sorted_candidates = [candidates[i] for i in sorted_scores]
         best_candidates = sorted_candidates[-beam_width:]
 
-        # candidates = sorted(candidates, key=lambda x: x[1], reverse=True)
-        # best_candidates = candidates[:beam_width]
+        # candidates = sorted(candidates, key=lambda x: x[1])
+        # best_candidates = candidates[-beam_width:]
 
         if all("endofseq" in seq for seq, _ in best_candidates):
             break
